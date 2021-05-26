@@ -29,21 +29,22 @@ adverbs = [key for key,value in tags if value == "RB"]
 #目标词
 target = [word for word in text if word in target_adverbs]
 
-with open("analysis.md","w") as f:
+with open("analysis.html","w") as f:
     print("ok")
+    f.write("<html><body>")
     for word in text:
         if word in target:
-            str = " ** " + word + " **"
+            str = " <font color=red>" + word + "</font>"
             f.write(str)
         elif word in adverbs:
-            str = " *** " + word + " ***"
+            str = " <font color=orange>" + word + "</font>"
             f.write(str)
         elif word.isnumeric() or word.isalpha() or word == "(":
             str = " " + word
             f.write(str)
         else:
             f.write(word)
-
+    f.write("</body></html>")
     f.close()
     
 
