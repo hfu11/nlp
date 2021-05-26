@@ -1,6 +1,6 @@
-# nlp
+# nlp学习
 
-## python版本 3.6.9
+python版本 3.6.9
 
 ## 需要使用到的开源库：
 ### 1.nltk搭配punkt库
